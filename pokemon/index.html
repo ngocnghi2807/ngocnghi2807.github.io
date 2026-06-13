@@ -404,7 +404,7 @@ const SECTIONS = [
      {n:"Sylveon ex", s:"Prismatic Evolutions", num:"156/131", v:"SIR", g:"name:sylveon*", got:false},
      {n:"Sylveon", s:"SVP Black Star Promos", num:"172", v:"Promo", g:"name:sylveon*", got:false},
      {n:"Pikachu", s:"XY Black Star Promos (JP)", num:"90/XY-P", v:"Cameo · Promo", g:null, got:false, cameo:true},
-     {n:"Pikachu", s:"XY Black Star Promos", num:"XY95", v:"Cameo · Promo", g:null, got:false, cameo:true},
+     {n:"Pikachu", s:"XY Black Star Promos", num:"XY95", v:"Cameo · Promo", g:"name:pikachu*", got:false, cameo:true},
      {n:"Altaria", s:"Generations", num:"RC24/RC32", v:"Cameo · SIR", g:"name:altaria*", got:true, cameo:true},
      {n:"Clive", s:"Paldean Fates", num:"236/091", v:"Cameo · SIR", g:'name:clive', got:true, cameo:true},
      {n:"Cassiopeia", s:"Shrouded Fable", num:"94/64", v:"Cameo · SIR", g:'name:cassiopeia', got:true, cameo:true},
@@ -463,6 +463,29 @@ async function fetchGroup(q){
   return [];
 }
 function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+
+// fallback: fetch every card sharing this collector number, then match by set + name
+function apiNumber(num){ return (""+num).split("/")[0].trim().replace(/\s+/g,""); }
+function nameKey(n){ return (n||"").toLowerCase().replace(/[^a-z0-9& ]/g,"").trim().split(" ")[0]; }
+async function fetchByNumber(apiNum){
+  if(!apiNum) return [];
+  const key="n:"+apiNum;
+  if(imgCache[key]) return imgCache[key];
+  const url="https://api.pokemontcg.io/v2/cards?q="+encodeURIComponent('number:"'+apiNum+'"')+"&pageSize=250&select=id,name,number,set,images";
+  for(let attempt=0;attempt<3;attempt++){
+    try{
+      const res=await fetch(url,{headers:{"Accept":"application/json"}});
+      if(res.status===429){ await sleep(1500*(attempt+1)); continue; }
+      if(!res.ok) throw new Error("HTTP "+res.status);
+      const j=await res.json();
+      const slim=(j.data||[]).map(c=>({name:c.name,number:c.number,set:c.set?c.set.name:"",img:(c.images&&(c.images.large||c.images.small))||""}));
+      imgCache[key]=slim; saveImgCache();
+      return slim;
+    }catch(e){ await sleep(700*(attempt+1)); }
+  }
+  imgCache[key]=[]; saveImgCache();
+  return [];
+}
 
 function pickImage(group, card){
   if(!group||!group.length) return "";
@@ -649,23 +672,40 @@ async function loadImages(){
     }
   }
   await Promise.all([worker(),worker(),worker(),worker()]);
-  // assign images
+
+  function applyImage(cardEl,url){
+    const img=cardEl.querySelector("img"); const ph=cardEl.querySelector(".ph");
+    img.onload=()=>{ img.classList.add("loaded"); ph.style.display="none"; };
+    img.onerror=()=>{ ph.classList.remove("shimmer"); };
+    img.src=url;
+  }
+  function stopShimmer(cardEl){ const ph=cardEl.querySelector(".ph"); if(ph) ph.classList.remove("shimmer"); }
+
+  // first pass: match within the wildcard group; collect misses
+  const misses=[];
   SECTIONS.forEach(sec=>{
     sec.cards.forEach((c,i)=>{
       const cardEl=document.querySelector(`.card[data-sec="${sec.key}"][data-idx="${i}"]`);
       if(!cardEl) return;
-      const img=cardEl.querySelector("img");
-      const ph=cardEl.querySelector(".ph");
       const url=c.g?pickImage(results[c.g],c):"";
-      if(url){
-        img.onload=()=>{ img.classList.add("loaded"); ph.style.display="none"; };
-        img.onerror=()=>{ ph.classList.remove("shimmer"); };
-        img.src=url;
-      }else{
-        ph.classList.remove("shimmer"); // keep pretty placeholder
-      }
+      if(url){ applyImage(cardEl,url); }
+      else if(c.g){ misses.push({c,cardEl}); }   // retry by number below
+      else { stopShimmer(cardEl); }              // no source (JP-only) → keep placeholder
     });
   });
+
+  // second pass: retry misses by collector number, guarded by name + set
+  let mi=0;
+  async function fbWorker(){
+    while(mi<misses.length){
+      const m=misses[mi++];
+      const arr=(await fetchByNumber(apiNumber(m.c.num)))
+        .filter(r=>(r.name||"").toLowerCase().includes(nameKey(m.c.n)));
+      const url=pickImage(arr,m.c);
+      if(url) applyImage(m.cardEl,url); else stopShimmer(m.cardEl);
+    }
+  }
+  await Promise.all([fbWorker(),fbWorker(),fbWorker()]);
 }
 
 /* ---------- confetti ---------- */
