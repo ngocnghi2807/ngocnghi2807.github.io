@@ -230,7 +230,20 @@ footer button.reset{background:linear-gradient(135deg,#ff8fb0,#ff5c8a);}
   box-shadow:0 10px 30px rgba(214,42,134,.5);transition:transform .4s cubic-bezier(.2,.9,.2,1);font-size:14px;}
 .toast.show{transform:translateX(-50%) translateY(0);}
 
-body.hide-got .card.got{display:none;}
+body.hide-got .card-cell.got{display:none;}
+
+/* always-visible caption under each card */
+.card-cell{display:flex;flex-direction:column;}
+.cap{margin-top:9px;text-align:center;line-height:1.18;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.cap-name{font-family:'Baloo 2';font-weight:800;font-size:14.5px;color:var(--pink-deep);}
+.cap-set{font-size:12px;font-weight:500;color:var(--ink);opacity:.85;}
+.cap-meta{display:flex;gap:6px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:1px;}
+.cap-num{font-size:11px;font-weight:700;color:#a23a78;}
+.cap-var{font-size:10.5px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--pink-1),var(--pink-2));padding:1px 8px;border-radius:99px;}
+.cap-status{margin-top:5px;font-family:'Baloo 2';font-weight:700;font-size:11.5px;cursor:pointer;border:none;border-radius:99px;padding:3px 12px;transition:transform .12s;}
+.cap-status:active{transform:scale(.94);}
+.cap-status.on{color:#7a3b00;background:linear-gradient(135deg,var(--gold),#ff9ad5);box-shadow:0 3px 8px rgba(255,170,40,.4);}
+.cap-status:not(.on){color:var(--pink-deep);background:#fff;border:1.5px dashed #ff9ad5;}
 
 /* reveal-on-scroll */
 .reveal{opacity:0;transform:translateY(40px) rotateX(12deg);transition:opacity .7s, transform .7s;transform-origin:center bottom;}
@@ -606,14 +619,28 @@ function buildCard(sec,c,i){
     el.classList.toggle("flipped");
     burstAt(e.clientX,e.clientY,6);
   });
-  // collect toggle
+  // collect toggle (on card back)
   el.querySelector(".collect").addEventListener("click",(e)=>{
     e.stopPropagation();
     toggleCollect(el,sec,c,i);
   });
   // 3D tilt follow
   addTilt(el);
-  return el;
+
+  // wrap the card with an always-visible info caption underneath
+  const cell=document.createElement("div");
+  cell.className="card-cell"+(got?" got":"");
+  const cap=document.createElement("div");
+  cap.className="cap";
+  cap.innerHTML=`
+    <div class="cap-name">${c.n}</div>
+    <div class="cap-set">${c.s}</div>
+    <div class="cap-meta"><span class="cap-num">#${c.num}</span>${c.v?`<span class="cap-var">${c.v}</span>`:""}</div>
+    <button class="cap-status ${got?"on":""}" type="button">${got?"✓ Collected":"◯ Need it"}</button>`;
+  cap.querySelector(".cap-status").addEventListener("click",(e)=>{ e.stopPropagation(); toggleCollect(el,sec,c,i); });
+  cell.appendChild(el);
+  cell.appendChild(cap);
+  return cell;
 }
 
 function toggleCollect(el,sec,c,i){
@@ -627,6 +654,12 @@ function toggleCollect(el,sec,c,i){
   heart.textContent=now?"💖":"🤍";
   ctext.textContent=now?"Collected!":"Tap to collect";
   collectBox.setAttribute("aria-checked",now);
+  const cell=el.closest(".card-cell");
+  if(cell){
+    cell.classList.toggle("got",now);
+    const cs=cell.querySelector(".cap-status");
+    if(cs){ cs.classList.toggle("on",now); cs.textContent=now?"✓ Collected":"◯ Need it"; }
+  }
   updateSectionProgress(sec);
   if(now){
     const r=el.getBoundingClientRect();
@@ -853,6 +886,12 @@ document.getElementById("resetBtn").addEventListener("click",()=>{
     el.classList.toggle("got",c.got); el.classList.toggle("missing",!c.got);
     el.querySelector(".heart").textContent=c.got?"💖":"🤍";
     el.querySelector(".ctext").textContent=c.got?"Collected!":"Tap to collect";
+    const cell=el.closest(".card-cell");
+    if(cell){
+      cell.classList.toggle("got",c.got);
+      const cs=cell.querySelector(".cap-status");
+      if(cs){ cs.classList.toggle("on",c.got); cs.textContent=c.got?"✓ Collected":"◯ Need it"; }
+    }
   });
   SECTIONS.forEach(updateSectionProgress);
   showToast("Reset to spreadsheet ✨");
