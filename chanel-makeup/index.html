@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHANEL Makeup — Catalog theo danh mục, USP, giá &amp; đối thủ</title>
+<meta name="description" content="Bản đồ danh mục trang điểm CHANEL (tham chiếu chanel.com/vn): từng dòng sản phẩm, USP, giá tham khảo và đối thủ cạnh tranh.">
+<style>
+  :root{
+    --black:#0a0a0a; --ink:#1a1a1a; --white:#ffffff; --paper:#faf9f7;
+    --gold:#b8964f; --line:#e4e0d8; --muted:#6b6b6b; --chip:#f1efe9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.6}
+  .sans{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
+
+  header.hero{background:var(--black);color:var(--white);text-align:center;padding:64px 20px 48px}
+  header.hero .cc{font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  header.hero h1{font-weight:400;font-size:clamp(28px,5vw,46px);letter-spacing:.08em;text-transform:uppercase}
+  header.hero p.sub{max-width:760px;margin:18px auto 0;color:#c9c9c9;font-size:15px;font-style:italic}
+
+  nav#catnav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;text-align:center;padding:0 12px}
+  nav#catnav a{display:inline-block;padding:14px 16px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid transparent}
+  nav#catnav a:hover{border-bottom-color:var(--gold);color:var(--gold)}
+
+  main{max-width:1180px;margin:0 auto;padding:24px 20px 80px}
+
+  .notice{background:#fffbe9;border:1px solid #e8ddb0;border-radius:6px;padding:16px 20px;font-size:14px;margin:28px 0}
+  .notice strong{color:#8a6d1a}
+
+  section.cat{margin-top:64px;scroll-margin-top:70px}
+  .cat-head{border-bottom:2px solid var(--black);padding-bottom:12px;margin-bottom:8px;display:flex;flex-wrap:wrap;align-items:baseline;gap:14px}
+  .cat-head h2{font-weight:400;font-size:clamp(22px,3.4vw,32px);letter-spacing:.14em;text-transform:uppercase}
+  .cat-head .count{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+  .cat-desc{color:var(--muted);font-size:15px;font-style:italic;margin:10px 0 26px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:22px}
+
+  article.card{background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column}
+  .card-top{background:var(--black);color:var(--white);padding:16px 20px}
+  .card-top .line-tag{font-family:'Helvetica Neue',Arial,sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  .card-top h3{font-weight:400;font-size:19px;letter-spacing:.06em;text-transform:uppercase}
+  .card-top .official{font-size:13px;font-style:italic;color:#d8d8d8;margin-top:4px}
+  .card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:14px;flex:1}
+
+  .usp h4,.price h4,.rivals h4{font-family:'Helvetica Neue',Arial,sans-serif;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+  .usp ul{list-style:none}
+  .usp li{font-size:14px;padding-left:16px;position:relative;margin-bottom:5px}
+  .usp li::before{content:"—";position:absolute;left:0;color:var(--gold)}
+
+  .price p{font-size:14.5px}
+  .price .val{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:600;font-size:15px}
+  .price .src{display:block;font-size:12px;color:var(--muted);font-style:italic;margin-top:3px}
+
+  .rivals{margin-top:auto}
+  .rivals .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11.5px;background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:4px 11px;letter-spacing:.03em}
+
+  .vlink{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  .vlink a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}
+
+  footer{background:var(--black);color:#bdbdbd;padding:56px 20px;margin-top:80px}
+  footer .inner{max-width:900px;margin:0 auto;font-size:13.5px}
+  footer h3{color:var(--white);font-weight:400;letter-spacing:.2em;text-transform:uppercase;font-size:15px;margin:26px 0 10px}
+  footer h3:first-child{margin-top:0}
+  footer a{color:var(--gold);text-decoration:none}
+  footer li{margin:4px 0 4px 18px}
+  footer .fin{text-align:center;margin-top:40px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#777}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="cc">Beauty Intelligence · Vietnam</div>
+  <h1>Chanel Makeup Catalog</h1>
+  <p class="sub">Bản đồ toàn bộ các dòng trang điểm CHANEL — sắp xếp theo danh mục của chanel.com/vn/trang-diem: mỗi dòng gồm định vị chính thức, USP, giá tham khảo tại Việt Nam và đối thủ cạnh tranh trực tiếp.</p>
+</header>
+
+<nav id="catnav">
+  <a href="#moi">Môi</a>
+  <a href="#da">Da &amp; Nền</a>
+  <a href="#mat">Mắt</a>
+  <a href="#mong">Móng</a>
+  <a href="#co">Cọ &amp; Phụ kiện</a>
+  <a href="#boy">Boy de Chanel</a>
+  <a href="#set">Bộ sản phẩm</a>
+  <a href="#nguon">Nguồn &amp; phương pháp</a>
+</nav>
+
+<main>
+
+<div class="notice">
+  <strong>Cam kết trung thực về dữ liệu:</strong> chanel.com/vn chặn truy cập tự động, nên trang này được tổng hợp từ <em>chính các trang sản phẩm chanel.com/vn được Google index</em> (tên &amp; mô tả chính thức tiếng Việt) cộng với nguồn giá công khai tại Việt Nam (có ghi rõ nguồn từng con số, ngày tổng hợp 14/07/2026). CHANEL Việt Nam <strong>không công bố giá qua kênh có thể xác minh tự động</strong>, vì vậy: giá ghi ở đây là <em>giá tham khảo thị trường</em> — giá niêm yết chính thức luôn phải xem tại <a href="https://www.chanel.com/vn/trang-diem/">chanel.com/vn</a> hoặc boutique. Mục nào chưa xác minh được giá, mình để trống thay vì bịa số. Phần "đối thủ" là phân tích cạnh tranh của người viết, không phải tuyên bố của CHANEL.
+</div>
+
+<!-- ============================================================ MÔI -->
+<section class="cat" id="moi">
+  <div class="cat-head"><h2>Môi</h2><span class="count">Son thỏi · son kem · son dưỡng · chì kẻ môi</span></div>
+  <p class="cat-desc">Trái tim của CHANEL Makeup. Kim tự tháp 3 tầng: 31 Le Rouge (siêu cao cấp) → Rouge Allure (thời trang, sắc sảo) → Rouge Coco (dưỡng ẩm, dễ dùng hằng ngày).</p>
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Siêu cao cấp · Refillable</div><h3>31 Le Rouge</h3><div class="official">Son môi hiệu ứng satin / hiệu ứng lì — tên chính thức trên chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Dòng son đỉnh cao nhất của CHANEL, đặt theo địa chỉ 31 rue Cambon — nơi Gabrielle Chanel khởi nghiệp</li>
+          <li>Vỏ son bằng thủy tinh nguyên khối, thiết kế bởi Sylvie Legastelois — dùng lõi refill nắp nhôm, thay màu trên cùng một vỏ (định hướng bền vững)</li>
+          <li>2 chất son: satin và lì; bảng màu đỏ được tinh tuyển thay vì chạy theo số lượng</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">Phân khúc cao hơn hẳn son thường (bán tại boutique VN, vd. Lotte Mall Westlake Hà Nội)</span><span class="src">Chưa xác minh được giá niêm yết VN — xem chanel.com/vn; lõi refill bán riêng rẻ hơn vỏ đầy đủ</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Hermès Rouge Hermès</span><span class="chip">Guerlain Rouge G</span><span class="chip">La Bouche Rouge</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/171534/31-le-rouge-son-moi-hieu-ung-satin" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Biểu tượng · Lì rạng rỡ</div><h3>Rouge Allure Velvet</h3><div class="official">"Son môi hiệu ứng lì với sắc màu rạng rỡ" — mô tả chính thức chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Chất lì "luminous matte" đặc trưng: lì nhung nhưng không xỉn, không khô môi như matte thông thường</li>
+          <li>Sắc tố đậm, lên màu chuẩn ngay lớp đầu; vỏ đen click-clack biểu tượng</li>
+          <li>Dòng ra phiên bản giới hạn liên tục theo BST thời trang (bản limited có cả set 2 son)</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 1.450.000₫ (tham khảo)</span><span class="src">Retailer VN ShinByLin niêm yết 1.450.000₫ (bản limited, 07/2026); hàng xách tay phổ biến 850.000–900.000₫ theo Lipstick.vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Rouge Dior Velvet</span><span class="chip">YSL RPC The Slim</span><span class="chip">Tom Ford Matte</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/162570/rouge-allure-velvet-son-moi-hieu-ung-li-voi-sac-mau-rang-ro/" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Biểu tượng · Satin</div><h3>Rouge Allure</h3><div class="official">Son môi satin rạng rỡ, sắc tố đậm — dòng chị em của Velvet</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Finish satin phát sáng ("luminous intense") — màu đậm nhưng bề mặt mềm, sang</li>
+          <li>Cơ chế mở click một chạm bằng vỏ kim loại đen — trải nghiệm "ritual" đặc trưng Chanel</li>
+          <li>Bảng màu rất rộng, nhiều tông đỏ/hồng đất hợp da châu Á</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 900.000 – 1.450.000₫ (tham khảo)</span><span class="src">Khoảng giá tổng hợp từ Lipstick.vn, Chiaki, ShinByLin (2024–2026); giá niêm yết xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">YSL Rouge Pur Couture</span><span class="chip">Dior Rouge Dior</span><span class="chip">Givenchy Le Rouge</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/moi/" target="_blank" rel="noopener">Danh mục môi chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Cao cấp · Serum son</div><h3>Rouge Allure L'Extrait</h3><div class="official">Son thỏi đậm đặc sắc tố, dạng refill — bậc cao nhất của nhà Allure</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Công thức đậm đặc sắc tố nhất nhà Allure, mỏng nhẹ như "extrait" nước hoa</li>
+          <li>Vỏ có lõi thay thế (refillable) — mua lõi rẻ hơn mua nguyên cây</li>
+          <li>Định vị giữa Rouge Allure thường và 31 Le Rouge</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">Cao hơn Rouge Allure thường</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Guerlain Rouge G</span><span class="chip">Dior Rouge Premier</span><span class="chip">Tom Ford Slim Lip Color</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/moi/" target="_blank" rel="noopener">Danh mục môi chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Son kem · Bóng bền màu</div><h3>Rouge Allure Laque</h3><div class="official">"Son kem hiệu ứng satin căng mịn và bền màu môi" — mô tả chính thức chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Son kem lỳ-bóng lai: màng son như "sơn mài" (laque) căng gương nhưng bám màu lâu</li>
+          <li>Không dính, không cần dặm lại nhiều lần trong ngày</li>
+          <li>Đầu cọ chéo lấy nét viền môi chính xác</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 900.000 – 1.450.000₫ (tham khảo)</span><span class="src">Khoảng giá son Chanel chính hãng tại VN theo Lipstick.vn/retailer 2024–2026</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">YSL Tatouage Couture</span><span class="chip">Dior Rouge Dior Forever Liquid</span><span class="chip">Armani Lip Maestro</span></div></div>
+        <div class="vlink"><a href="https://chanel.com/vn/trang-diem/p/165066/rouge-allure-laque-son-kem-hieu-ung-satin-cang-min-va-ben-mau-moi" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Dưỡng ẩm · Hằng ngày</div><h3>Rouge Coco</h3><div class="official">"Son môi giàu ẩm" — mô tả chính thức chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Công thức sáp thực vật mimosa, jojoba và hướng dương — vừa dưỡng vừa nuôi môi (theo trang chính thức)</li>
+          <li>Mỗi màu đặt theo tên người trong "hệ sinh thái" của Coco Chanel (468 Michèle, 424 Edith…)</li>
+          <li>Cửa ngõ vào thế giới son Chanel: dễ đánh, hợp dùng hằng ngày</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 850.000 – 1.200.000₫ (tham khảo)</span><span class="src">Lipstick.vn: hàng nhập về VN phổ biến 850.000–900.000₫; giá boutique cao hơn — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Rouge Dior (satin)</span><span class="chip">Guerlain KissKiss</span><span class="chip">Lancôme L'Absolu Rouge</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/172468/rouge-coco-son-moi-giau-am/" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Dưỡng ẩm · Căng bóng</div><h3>Rouge Coco Bloom</h3><div class="official">"Son môi dưỡng ẩm cho làn môi đầy đặn, màu sắc cá tính, lâu trôi và căng bóng" — chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>4 lời hứa trong 1: ẩm + môi trông đầy đặn hơn + màu rõ + bóng gương</li>
+          <li>Chất son tan mượt như dưỡng nhưng lên màu như son thỏi</li>
+          <li>Trọng lượng nhẹ, không cảm giác nặng môi — hợp khí hậu nóng ẩm VN</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 900.000 – 1.300.000₫ (tham khảo)</span><span class="src">Khoảng giá retailer VN (Kallos, Chiaki…) 2024–2026; giá niêm yết xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">YSL Loveshine</span><span class="chip">Dior Addict</span><span class="chip">Guerlain KissKiss Shine Bloom</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/172120/rouge-coco-bloom-son-moi-duong-am-cho-lan-moi-day-dan-mau-sac-ca-tinh-lau-troi-va-cang-bong/" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Bóng ướt · Trẻ trung</div><h3>Rouge Coco Flash</h3><div class="official">Son môi hiệu ứng bóng ướt, lướt nhanh cấp ẩm tức thì</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>"Flash" = một lượt lướt là xong: chất son tan chảy theo thân nhiệt, màu bóng ướt</li>
+          <li>Định vị trẻ nhất nhà Coco — màu tươi, finish gần gloss nhưng tiện như son thỏi</li>
+          <li>Bản sáng tạo lại của huyền thoại Rouge Coco Shine</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 850.000 – 1.200.000₫ (tham khảo)</span><span class="src">Khoảng giá retailer VN (Kallos…) 2024–2026; giá niêm yết xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Addict</span><span class="chip">YSL Loveshine Candy Glaze</span><span class="chip">Armani Ecstasy Shine</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/moi/" target="_blank" rel="noopener">Danh mục môi chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Son dưỡng có màu</div><h3>Rouge Coco Baume</h3><div class="official">"Son dưỡng môi có màu với sắc độ có thể điều chỉnh theo ý thích" — chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Sắc độ tùy chỉnh: 1 lượt cho màu nhẹ tự nhiên, 3 lượt cho màu rõ (cơ chế chính thức Chanel mô tả)</li>
+          <li>Lai giữa skincare môi và makeup — dùng được cả ngày, cả khi không trang điểm</li>
+          <li>Có cả phiên bản trong suốt thuần dưỡng</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 850.000 – 1.100.000₫ (tham khảo)</span><span class="src">Khoảng giá retailer VN 2024–2026; giá niêm yết xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Lip Glow</span><span class="chip">Fresh Sugar Lip</span><span class="chip">YSL Loveshine Balm</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/171934/rouge-coco-baume-hieu-ung-satin-son-duong-moi-co-mau-voi-sac-do-co-the-dieu-chinh-theo-y-thich/" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Định hình · Hoàn thiện</div><h3>Le Crayon Lèvres</h3><div class="official">Chì kẻ viền môi bền màu</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Định hình viền, chống lem cho các dòng son kem/bóng của hãng</li>
+          <li>Chất chì mềm, tiệp màu với bảng son Rouge Allure/Coco</li>
+          <li>Kèm chuốt chì và đầu tán tích hợp</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Contour</span><span class="chip">MAC Lip Pencil</span><span class="chip">Charlotte Tilbury Lip Cheat</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/moi/" target="_blank" rel="noopener">Danh mục môi chính thức ↗</a></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================================================ DA & NỀN -->
+<section class="cat" id="da">
+  <div class="cat-head"><h2>Da &amp; Nền</h2><span class="count">Kem nền · cushion · phấn · má hồng · che khuyết điểm · bắt sáng</span></div>
+  <p class="cat-desc">Hai trụ cột: LES BEIGES (vẻ đẹp "healthy glow" tự nhiên như không trang điểm) và ULTRA LE TEINT (che phủ hoàn hảo, bền màu cả ngày).</p>
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Les Beiges · Chủ lực</div><h3>Les Beiges Foundation</h3><div class="official">Kem nền dưỡng ẩm, hiệu ứng căng khỏe tự nhiên &amp; lâu trôi (Healthy Glow – Hydration and Longwear)</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Triết lý "healthy glow": da như da thật, đẹp hơn phiên bản gốc — không mặt nạ</li>
+          <li>Vừa dưỡng ẩm vừa giữ nền bền — hiếm có ở nhóm nền finish tự nhiên</li>
+          <li>Dải màu rộng đánh số theo undertone (B = beige, BR = beige rosé, BD = beige doré)</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 1.400.000 – 1.800.000₫ / 30ml (tham khảo)</span><span class="src">Khoảng giá retailer VN (Kallos, Em Đẹp Em Xinh, Kunishop) 2024–2026; giá niêm yết xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Armani Luminous Silk</span><span class="chip">Dior Forever Skin Glow</span><span class="chip">YSL All Hours</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/da/" target="_blank" rel="noopener">Danh mục da chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Les Beiges · Nền nước</div><h3>Les Beiges Water-Fresh Tint</h3><div class="official">Kem nền dạng nước với công nghệ hạt sắc tố vi lỏng (Eau de Teint)</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Công nghệ microfluidic: sắc tố bọc trong "giọt nước" vỡ ra khi thoa — nhẹ chưa từng có</li>
+          <li>Che phủ sheer, mát lạnh, gần như không cảm nhận trên da — chuẩn "your skin but better"</li>
+          <li>Thoa bằng cọ đi kèm; đặc biệt hợp thời tiết nóng ẩm</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 1.400.000 – 1.800.000₫ / 30ml (tham khảo)</span><span class="src">Khoảng giá retailer VN (Em Đẹp Em Xinh…) 2024–2026; giá niêm yết xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Backstage Face &amp; Body</span><span class="chip">YSL Nu Bare Look Tint</span><span class="chip">Giorgio Armani Neo Nude</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/da/" target="_blank" rel="noopener">Danh mục da chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Ultra Le Teint · Bền màu</div><h3>Ultra Le Teint Fluide</h3><div class="official">"Bền màu – dễ chịu suốt cả ngày, hiệu ứng hoàn hảo" — mô tả chính thức chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Nền che phủ cao, finish nhung mịn không tì vết — đối cực với Les Beiges</li>
+          <li>Bền màu cả ngày nhưng vẫn "dễ chịu" (không bí, không nứt nền) — đúng chữ Ultra Wear + Comfort</li>
+          <li>Kháng nóng ẩm tốt — lựa chọn cho sự kiện, chụp hình</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 1.186.000₫+ / 30ml (tham khảo)</span><span class="src">Kunishop niêm yết ≈1.186.000₫ (2025); giá boutique cao hơn — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Estée Lauder Double Wear</span><span class="chip">Dior Forever</span><span class="chip">YSL All Hours</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/146310/ultra-le-teint-fluide-ben-mau-de-chiu-suot-ca-ngay-hieu-ung-hoan-hao/" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Ultra Le Teint · Cushion</div><h3>Ultra Le Teint Cushion</h3><div class="official">"Kem nền lâu trôi, dưỡng ẩm – hiệu ứng không tì vết" — chanel.com/vn (có bán lõi thay thế riêng)</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Format cushion tiện dặm lại — thiết kế cho thị trường châu Á</li>
+          <li>Kết hợp lâu trôi + dưỡng ẩm + che phủ không tì vết trong một hộp gọn</li>
+          <li>Có lõi refill chính hãng (xác nhận trên chanel.com/vn) — tiết kiệm và bền vững</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">— (lõi refill rẻ hơn hộp đầy đủ)</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Forever Cushion</span><span class="chip">Sulwhasoo Perfecting Cushion</span><span class="chip">YSL Cushion Encre de Peau</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/146460/ultra-le-teint-cushion-kem-nen-lau-troi-duong-am-hieu-ung-khong-ti-vet/" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Đa năng · Chống nắng</div><h3>CC Cream Super Active</h3><div class="official">Kem hiệu chỉnh màu da đa tác động với chống nắng SPF cao</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>5-trong-1: dưỡng ẩm, làm đều màu, che phủ nhẹ, bảo vệ, chống nắng</li>
+          <li>Một bước thay cả kem dưỡng + kem nền cho ngày thường</li>
+          <li>Được cộng đồng châu Á đặc biệt ưa chuộng nhờ finish tự nhiên</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">IT Cosmetics CC+</span><span class="chip">Erborian CC Crème</span><span class="chip">Dior Forever Glow Star Filter*</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/da/" target="_blank" rel="noopener">Danh mục da chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Che khuyết điểm</div><h3>Le Correcteur de Chanel</h3><div class="official">Kem che khuyết điểm lâu trôi</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Che phủ cao vùng mắt/khuyết điểm mà không đọng vân (longwear)</li>
+          <li>Tông màu đồng bộ hệ màu B/BR/BD của nền Chanel — dễ phối chuẩn</li>
+          <li>Đầu cọ mềm lấy sản phẩm chính xác</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">NARS Radiant Creamy</span><span class="chip">YSL Touche Éclat</span><span class="chip">Dior Forever Skin Correct</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/da/" target="_blank" rel="noopener">Danh mục da chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Phấn phủ · Huyền thoại</div><h3>Poudre Universelle Libre</h3><div class="official">Phấn phủ bột tơ mịn tự nhiên</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Phấn bột huyền thoại của Chanel — hạt phấn siêu mịn, hiệu ứng màng sương mờ tự nhiên</li>
+          <li>Khóa nền mà không làm mất độ "sống" của da</li>
+          <li>Một trong những sản phẩm lâu đời, ổn định nhất của hãng</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Laura Mercier Translucent</span><span class="chip">Guerlain Les Voilettes</span><span class="chip">Hourglass Veil</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/da/" target="_blank" rel="noopener">Danh mục da chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Les Beiges · Phấn</div><h3>Les Beiges Healthy Glow Sheer Powder</h3><div class="official">Phấn phủ mỏng nhẹ hiệu ứng căng khỏe rạng rỡ</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Phấn nén "sheer" — phủ nhẹ, giữ hiệu ứng glow thay vì lì hóa làn da</li>
+          <li>Dùng được như phấn phủ lẫn bronzer nhẹ tùy tông</li>
+          <li>Đồng bộ hệ màu với nền Les Beiges</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Hourglass Ambient Lighting</span><span class="chip">Guerlain Terracotta</span><span class="chip">Dior Forever Natural Bronze</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/da/" target="_blank" rel="noopener">Danh mục da chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Má hồng · Biểu tượng</div><h3>Joues Contraste</h3><div class="official">"Phấn má hồng" — tên chính thức chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Kết cấu phấn-mịn-như-lụa với sắc tố tinh tế — má hồng "quý phái" khó thay thế</li>
+          <li>Bảng màu kinh điển: 55 In Love, 71 Malice, 330 Rose Pétillant… được săn lùng toàn cầu</li>
+          <li>Hộp đen gương + chổi kèm đúng chuẩn ritual Chanel</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 1.050.000 – 1.500.000₫ / 4g (tham khảo)</span><span class="src">Khoảng giá tổng hợp từ retailer VN (Kallos, Vua Hàng Hiệu, Beautyfulls) 2024–2026</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">NARS Blush</span><span class="chip">Dior Rouge Blush</span><span class="chip">Gucci Blush de Beauté</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/da/" target="_blank" rel="noopener">Danh mục da chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Glow đa năng</div><h3>Baume Essentiel</h3><div class="official">Thanh bắt sáng đa năng dạng sáp (multi-use glow stick)</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Highlight dạng balm trong suốt/ánh nhẹ — hiệu ứng "glass skin" không kim tuyến</li>
+          <li>Đa năng: gò má, bầu mắt, môi, xương quai xanh</li>
+          <li>Tiên phong xu hướng makeup căng bóng tối giản ở phân khúc luxury</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Westman Atelier Lit Up</span><span class="chip">Charlotte Tilbury Beauty Light Wand</span><span class="chip">Hermès Trait d'Hermès</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/da/" target="_blank" rel="noopener">Danh mục da chính thức ↗</a></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================================================ MẮT -->
+<section class="cat" id="mat">
+  <div class="cat-head"><h2>Mắt</h2><span class="count">Phấn mắt · mascara · kẻ mắt · chân mày</span></div>
+  <p class="cat-desc">Từ bảng mắt tweed dệt như vải couture đến mascara Le Volume kinh điển — danh mục mắt là nơi Chanel "may đo" thời trang lên gương mặt.</p>
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Bảng mắt · Biểu tượng</div><h3>Les 4 Ombres</h3><div class="official">Bảng phấn mắt 4 ô đa hiệu ứng (Multi-Effect Quadra Eyeshadow)</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>4 màu được "may đo" thành một look hoàn chỉnh — không cần nghĩ cách phối</li>
+          <li>Đa hiệu ứng trong 1 bảng: lì, satin, ánh kim, lấp lánh</li>
+          <li>Bản giới hạn Les 4 Ombres Tweed phủ vân vải tweed thật — item sưu tầm</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 1.200.000 – 1.500.000₫ (tham khảo)</span><span class="src">Beautyfulls ≈1.200.000₫; Nàng Xuân (bản limited) ≈1.500.000₫ (2024–2026)</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Diorshow 5 Couleurs</span><span class="chip">Tom Ford Eye Color Quad</span><span class="chip">YSL Couture Mini Clutch</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/mat/" target="_blank" rel="noopener">Danh mục mắt chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Bảng mắt · Tự nhiên</div><h3>Les Beiges Eyeshadow Palette</h3><div class="official">"Bảng màu mắt rạng rỡ tự nhiên" — tên chính thức chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Bảng nude/beige ấm theo triết lý Les Beiges — trang điểm như không</li>
+          <li>Nhiều ô màu dùng đủ look ngày đi làm đến tối</li>
+          <li>Chất phấn mềm, dễ tán cho người mới</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Backstage Eye Palette</span><span class="chip">Charlotte Tilbury Luxury Palette</span><span class="chip">Tom Ford Soleil Quad</span></div></div>
+        <div class="vlink"><a href="https://chanel.com/vn/trang-diem/p/184180/les-beiges-eyeshadow-palette-bang-mau-mat-rang-ro-tu-nhien" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Phấn mắt đơn</div><h3>Ombre Première</h3><div class="official">"Phấn mắt lâu trôi đa hiệu ứng" — mô tả chính thức chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Màu đơn đậm chất "statement": thoa cả bầu mắt rồi tán bằng cọ là xong một look (hướng dẫn chính thức)</li>
+          <li>Bám lâu, ít rơi phấn; có phiên bản kem (Laque) hiệu ứng gương</li>
+          <li>Dành cho người chơi màu theo lớp thay vì theo bảng</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Tom Ford Cream Color</span><span class="chip">Armani Eye Tint</span><span class="chip">Hermès Ombres d'Hermès</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/176012/ombre-premiere-phan-mat-lau-troi-da-hieu-ung/" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Mascara · Chủ lực</div><h3>Le Volume de Chanel</h3><div class="official">"Mascara làm dày mi" — tên chính thức chanel.com/vn (có bản Waterproof riêng)</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Đầu cọ "snowflake" độc quyền — chải tách và ôm từng sợi mi, dày tức thì</li>
+          <li>Màu đen sâu đặc trưng (10 Noir); bản Waterproof cho khí hậu nóng ẩm (có 20 Brun)</li>
+          <li>Mascara biểu tượng nhất của hãng, gia đình mở rộng có Le Volume Stretch (cọ silicon co giãn) và Inimitable (tách mi tự nhiên)</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN đáng tin — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Lancôme Hypnôse</span><span class="chip">Dior Diorshow</span><span class="chip">YSL Lash Clash</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/191210/le-volume-de-chanel-mascara-lam-day-mi/" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Kẻ mắt · Chì waterproof</div><h3>Stylo Yeux Waterproof</h3><div class="official">Chì kẻ mắt chống nước bền màu</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Chì vặn không cần gọt, chống nước thật sự — trụ tốt trong khí hậu VN</li>
+          <li>Nhiều màu ngoài đen: nâu, xanh navy, ánh kim để "đổi vị" sang trọng</li>
+          <li>Đầu tán kèm theo thân chì</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Diorshow 24H Stylo</span><span class="chip">Urban Decay 24/7</span><span class="chip">Bobbi Brown Long-Wear</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/mat/" target="_blank" rel="noopener">Danh mục mắt chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Kẻ mắt · Bút dạ</div><h3>Signature de Chanel</h3><div class="official">Bút kẻ mắt nước đầu dạ, nét mảnh, lâu trôi</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Đầu dạ dẻo lấy cảm hứng từ nét bút ký của Coco Chanel — kẻ được từ nét siêu mảnh đến cánh én đậm</li>
+          <li>Đen mực sâu, khô nhanh, ít lem</li>
+          <li>Thân bút thiết kế như bút máy cao cấp</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">YSL Crush Liner / EPC</span><span class="chip">KVD Tattoo Liner</span><span class="chip">Dior Diorshow On Stage Liner</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/mat/" target="_blank" rel="noopener">Danh mục mắt chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Chân mày</div><h3>Stylo Sourcils Waterproof &amp; Le Gel Sourcils</h3><div class="official">Chì kẻ mày chống nước và gel định hình chân mày</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Chì mày đầu mảnh vẽ sợi tự nhiên, chống nước; kèm chổi xoắn ốc</li>
+          <li>Le Gel Sourcils giữ dáng mày cả ngày, có bản có màu và trong suốt</li>
+          <li>Tông màu tây nhưng đủ nâu trung tính hợp tóc châu Á</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Benefit Precisely My Brow</span><span class="chip">Dior Diorshow Brow Styler</span><span class="chip">Glossier Boy Brow</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/mat/" target="_blank" rel="noopener">Danh mục mắt chính thức ↗</a></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================================================ MÓNG -->
+<section class="cat" id="mong">
+  <div class="cat-head"><h2>Móng</h2><span class="count">Sơn màu · base · top coat · dưỡng</span></div>
+  <p class="cat-desc">Chanel biến sơn móng thành phụ kiện thời trang — màu 505 Particulière hay Rouge Noir từng tạo cơn sốt toàn cầu.</p>
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Biểu tượng</div><h3>Le Vernis</h3><div class="official">"Sơn móng bền màu" — tên chính thức chanel.com/vn</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Màu ra theo mùa cùng BST thời trang — sơn móng như "phụ kiện couture"</li>
+          <li>Công thức bền màu, bóng sâu; chai vuông nắp đen kinh điển</li>
+          <li>Nhiều màu huyền thoại được sưu tầm (Rouge Noir gắn với lịch sử nhà mốt)</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">≈ 585.500₫ (giá đề xuất theo iCheck)</span><span class="src">iCheck.vn ghi nhận giá đề xuất 585.500₫; retailer VN dao động quanh 550.000–800.000₫</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Vernis</span><span class="chip">Hermès Les Mains</span><span class="chip">OPI / Essie (masstige)</span></div></div>
+        <div class="vlink"><a href="https://chanel.com/vn/trang-diem/p/159755/le-vernis-son-mong-ben-mau" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Hoàn thiện & chăm sóc</div><h3>La Base &amp; Le Gel Coat &amp; L'Huile Camélia</h3><div class="official">Sơn lót bảo vệ · top coat hiệu ứng gel · dầu dưỡng móng chiết xuất hoa trà</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Hệ 3 bước hoàn chỉnh quanh Le Vernis: lót bảo vệ — khóa màu bóng như gel — dưỡng phục hồi</li>
+          <li>L'Huile Camélia dùng hoa trà (camellia) — biểu tượng của Gabrielle Chanel — dưỡng móng và da quanh móng</li>
+          <li>Le Gel Coat cho độ bóng dày như làm gel salon mà không cần hơ đèn</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Huile Abricot</span><span class="chip">Seche Vite (pro)</span><span class="chip">OPI Nail Envy</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/mong/" target="_blank" rel="noopener">Danh mục móng chính thức ↗</a></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================================================ CỌ & PHỤ KIỆN -->
+<section class="cat" id="co">
+  <div class="cat-head"><h2>Cọ &amp; Phụ kiện</h2><span class="count">Les Pinceaux · gương · phụ kiện trang điểm</span></div>
+  <p class="cat-desc">Bộ công cụ hoàn thiện "nghi thức" trang điểm Chanel.</p>
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Bộ cọ chính hãng</div><h3>Les Pinceaux de Chanel</h3><div class="official">Hệ cọ trang điểm chuyên biệt: nền, phấn, má, mắt, môi (đánh số theo chức năng)</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Cán đen mờ khắc logo — thiết kế đồng bộ như một bộ sưu tập</li>
+          <li>Mỗi cây tối ưu cho đúng sản phẩm Chanel tương ứng (vd. cọ kabuki cho phấn bắt sáng — theo hướng dẫn chính thức)</li>
+          <li>Lông tổng hợp chất lượng cao, thân thiện hơn với động vật</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Giá theo từng cây — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior Backstage Brushes</span><span class="chip">Hakuhodo (chuyên cọ)</span><span class="chip">Tom Ford Brushes</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/" target="_blank" rel="noopener">Danh mục chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Phụ kiện</div><h3>Miroir Double Facettes</h3><div class="official">Gương gập hai mặt (một mặt phóng đại)</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Gương đen bóng khắc logo — phụ kiện túi xách "entry" mang tính biểu tượng</li>
+          <li>Mặt phóng đại cho kẻ mắt/chân mày chính xác</li>
+          <li>Món quà tặng phổ biến nhất nhà Chanel Beauty</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior mirror</span><span class="chip">YSL accessories</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/" target="_blank" rel="noopener">Danh mục chính thức ↗</a></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================================================ BOY DE CHANEL -->
+<section class="cat" id="boy">
+  <div class="cat-head"><h2>Boy de Chanel</h2><span class="count">Trang điểm dành cho nam</span></div>
+  <p class="cat-desc">Ra mắt 2018 — dòng makeup nam đầu tiên của một nhà mốt xa xỉ lớn, đặt theo tên Boy Capel, tình yêu lớn của Gabrielle Chanel.</p>
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Nam · Kẻ mắt</div><h3>Boy de Chanel 3-in-1 Eye Pencil</h3><div class="official">"Chì kẻ mắt đa dụng 3-in-1 với hiệu ứng lì lâu trôi" — chanel.com/vn (giữ đến 12 giờ)</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>3 cách dùng chính thức: viền mi dưới, viền mi trên hoặc màu mắt</li>
+          <li>Hiệu ứng lì tự nhiên "không lộ trang điểm" — đúng triết lý makeup nam</li>
+          <li>Lâu trôi tới 12 giờ (theo trang chính thức); màu 614 Brown tự nhiên</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Tom Ford For Men</span><span class="chip">Shiseido Men</span><span class="chip">War Paint</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/p/195614/boy-de-chanel-3-in-1-eye-pencil-chi-ke-mat-da-dung-3-in-1-voi-hieu-ung-li-lau-troi/" target="_blank" rel="noopener">Trang chính thức ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Nam · Nền & môi</div><h3>Boy de Chanel Fluide &amp; Lip Balm</h3><div class="official">Kem nền mỏng nhẹ và son dưỡng môi dành cho nam</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Nền sheer làm đều màu da, che nhẹ khuyết điểm mà nhìn như không đánh</li>
+          <li>Lip balm dưỡng vô hình, finish lì nhẹ</li>
+          <li>Bao bì đen mờ tối giản, không "cosmetic" — dễ tiếp cận với nam giới</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">—</span><span class="src">Chưa xác minh được giá tham khảo VN — xem chanel.com/vn</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Shiseido Men</span><span class="chip">Lab Series</span><span class="chip">Dior (chưa có line nam tương đương)</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/" target="_blank" rel="noopener">Danh mục chính thức ↗</a></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============================================================ SETS -->
+<section class="cat" id="set">
+  <div class="cat-head"><h2>Bộ sản phẩm</h2><span class="count">Danh mục chính thức trên chanel.com/vn (c/5x1x5)</span></div>
+  <p class="cat-desc">Chanel VN có danh mục "Bộ sản phẩm" riêng — các set quà tặng và phiên bản giới hạn theo mùa (vd. set 2 son Rouge Allure Velvet limited đã được xác nhận trên trang VN). Danh sách thay đổi liên tục theo BST, nên xem trực tiếp tại trang chính thức.</p>
+  <div class="grid">
+    <article class="card">
+      <div class="card-top"><div class="line-tag">Theo mùa</div><h3>Set quà &amp; phiên bản giới hạn</h3><div class="official">Ví dụ đã xác nhận: "ROUGE ALLURE VELVET phiên bản giới hạn – set 2 son môi hiệu ứng lì rạng rỡ"</div></div>
+      <div class="card-body">
+        <div class="usp"><h4>USP</h4><ul>
+          <li>Đóng hộp quà đặc trưng Chanel — giá trị tặng phẩm rất cao</li>
+          <li>Các BST makeup theo mùa (xuân-hè / thu-đông / holiday) có màu độc quyền không bán lẻ lại</li>
+          <li>Kênh sưu tầm: bản limited thường tăng giá trên thị trường thứ cấp</li>
+        </ul></div>
+        <div class="price"><h4>Giá</h4><p><span class="val">Theo từng set</span><span class="src">Xem danh mục chính thức</span></p></div>
+        <div class="rivals"><h4>Đối thủ trực tiếp</h4><div class="chips"><span class="chip">Dior holiday sets</span><span class="chip">YSL gift sets</span><span class="chip">Jo Malone (gifting)</span></div></div>
+        <div class="vlink"><a href="https://www.chanel.com/vn/trang-diem/bo-san-pham/c/5x1x5/" target="_blank" rel="noopener">Danh mục bộ sản phẩm chính thức ↗</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================ NGUỒN -->
+<section class="cat" id="nguon">
+  <div class="cat-head"><h2>Nguồn &amp; phương pháp</h2></div>
+  <div style="font-size:14.5px;max-width:860px">
+    <p><strong>Cách tổng hợp (14/07/2026):</strong> chanel.com/vn từ chối truy cập tự động (HTTP 403), nên tên sản phẩm và mô tả chính thức tiếng Việt được lấy từ <em>các trang sản phẩm chanel.com/vn xuất hiện trong chỉ mục tìm kiếm công khai</em> — mỗi thẻ đều gắn link về đúng trang chính thức để đối chiếu. Giá là <em>giá tham khảo</em> từ retailer/nguồn công khai tại Việt Nam (không phải giá niêm yết CHANEL); mục nào không tìm được nguồn đáng tin thì để trống thay vì ước đoán. Phần "đối thủ trực tiếp" là phân tích thị trường của người tổng hợp.</p>
+    <p style="margin-top:12px"><strong>Nguồn giá đã dùng:</strong></p>
+    <ul style="margin:6px 0 0 20px">
+      <li><a href="https://lipstick.vn/son-chanel-gia-bao-nhieu-mua-o-dau-chinh-hang/">Lipstick.vn — Son Chanel giá bao nhiêu</a> (son thỏi nhập VN ~850.000–900.000₫)</li>
+      <li><a href="https://shinbylin.vn/products/son-chanel-rouge-allure-velvet-limited-edition">ShinByLin — Rouge Allure Velvet limited 1.450.000₫</a></li>
+      <li><a href="https://www.beautyfulls.com/phan-mat-chanel-4-o">Beautyfulls — Les 4 Ombres ≈1.200.000₫</a> · <a href="https://nangxuan.com.vn/san-pham/phan-mat-chanel-les-4-ombres-limited-legerete-et-experience-limited-new">Nàng Xuân — bản limited ≈1.500.000₫</a></li>
+      <li><a href="https://icheck.vn/san-pham/son-mong-tay-chanel-le-vernis-3145891596878">iCheck — Le Vernis giá đề xuất 585.500₫</a></li>
+      <li><a href="https://kunishop.vn/kem-nen-chanel-ultra-le-tint-all-day-comfort">Kunishop — Ultra Le Teint ≈1.186.000₫</a></li>
+      <li>Kallos, Vua Hàng Hiệu, Chiaki, Em Đẹp Em Xinh — khoảng giá má hồng Joues Contraste ≈1.050.000–1.500.000₫ và kem nền Les Beiges</li>
+    </ul>
+    <p style="margin-top:12px"><strong>Trang chính thức để kiểm chứng:</strong> <a href="https://www.chanel.com/vn/trang-diem/">chanel.com/vn/trang-diem</a> — danh mục Môi · Mắt · Da · Móng · Bộ sản phẩm (c/5x1x5) · Boy de Chanel.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <h3>Miễn trừ trách nhiệm</h3>
+    <p>Đây là trang nghiên cứu/tổng hợp cá nhân phục vụ mục đích tham khảo, <strong>không liên kết, không được tài trợ và không đại diện cho CHANEL</strong>. Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. Giá tham khảo thay đổi theo thời điểm và tỷ giá; luôn kiểm tra giá niêm yết tại <a href="https://www.chanel.com/vn/trang-diem/">chanel.com/vn</a> hoặc boutique CHANEL Fragrance &amp; Beauty chính thức. Các phiên bản giới hạn có thể đã ngừng bán.</p>
+    <div class="fin">Tổng hợp 14 · 07 · 2026 — Vietnam Market</div>
+  </div>
+</footer>
+
+</body>
+</html>
